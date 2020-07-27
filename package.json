@@ -1,0 +1,59 @@
+{
+  "name": "mediaquery-observer",
+  "description": "Simple media query observer",
+  "version": "1.0.0",
+  "author": "Philipp Daun <daun@daun.ltd>)",
+  "license": "MIT",
+  "source": "src/index.js",
+  "main": "dist/mediaquery-observer.js",
+  "module": "dist/mediaquery-observer.es.js",
+  "esmodule": "dist/mediaquery-observer.modern.js",
+  "unpkg": "dist/mediaquery-observer.umd.js",
+  "scripts": {
+    "test": "npm run lint && npm run cover",
+    "test:only": "mocha --require esm --require jsdom-global/register test/**/*.js",
+    "test:watch": "npm test -- --watch",
+    "cover": "nyc --check-coverage npm run test:only",
+    "lint": "eslint src test",
+    "clean": "rimraf dist",
+    "bundle": "microbundle",
+    "build": "npm run clean && npm run bundle",
+    "prepublish": "npm run clean && npm run lint && npm run test && npm run build"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daun/mediaquery-observer"
+  },
+  "keywords": [
+    "css",
+    "javascript",
+    "mediaqueries",
+    "breakpoints"
+  ],
+  "bugs": {
+    "url": "https://github.com/daun/mediaquery-observer/issues"
+  },
+  "homepage": "https://github.com/daun/mediaquery-observer",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^7.3.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "esm": "^3.2.25",
+    "jsdom": "16.2.2",
+    "jsdom-global": "3.0.2",
+    "microbundle": "^0.12.1",
+    "mocha": "^8.0.1",
+    "nyc": "^15.1.0",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "enquire.js": "^2.1.6"
+  }
+}
