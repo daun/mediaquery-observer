@@ -13,13 +13,13 @@ with a few additions:
 ## Installation
 
 ```bash
-npm install mediaquery-observer
+npm install mq-observer
 ```
 
 ## Usage
 
 ```js
-import observer from 'mediaquery-observer'
+import observer from 'mq-observer'
 ```
 
 ### Adding queries
