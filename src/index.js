@@ -27,6 +27,17 @@ class MediaQueryObserver {
   }
 
   /**
+   * Check against a named media query.
+   *
+   * @param {String} queryName
+   * @return {Boolean}
+   */
+  matches(queryName) {
+    const query = this.queries[queryName]
+    return query && window.matchMedia(query).matches
+  }
+
+  /**
    * Observe a named media query. Returns a function that kills the observer.
    *
    * @param {String} queryName

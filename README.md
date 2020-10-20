@@ -31,6 +31,14 @@ observer.add({
 })
 ```
 
+### Matching queries
+
+```js
+if (observer.matches('multi-col-content')) {
+  // Run code for multi-col layout
+}
+```
+
 ### Observing queries
 
 See the [enquire.js docs](https://wicky.nillia.ms/enquire.js/) for details on
